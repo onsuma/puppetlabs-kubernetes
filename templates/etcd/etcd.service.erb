@@ -29,7 +29,7 @@ ExecStart=/usr/local/bin/etcd --name <%= @hostname %> \
     --initial-cluster-token my-etcd-token \
     --initial-cluster-state new \
     --heartbeat-interval <%= @etcd_heartbeat_interval %> \
-    --election-timeout <%= @etcd_election_timeout %> \
+    --election-timeout <%= @etcd_election_timeout %>
 
 [Install]
 WantedBy=multi-user.target
