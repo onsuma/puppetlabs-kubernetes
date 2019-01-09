@@ -27,7 +27,9 @@ ExecStart=/usr/local/bin/etcd --name <%= @hostname %> \
     --peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt \
     --initial-cluster <%= @etcd_initial_cluster %> \
     --initial-cluster-token my-etcd-token \
-    --initial-cluster-state new
+    --initial-cluster-state new \
+    --heartbeat-interval <%= @etcd_heartbeat_interval %> \ \
+    --election-timeout <%= @etcd_election_timeout %> \
 
 [Install]
 WantedBy=multi-user.target

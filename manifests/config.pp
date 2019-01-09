@@ -16,6 +16,8 @@ class kubernetes::config (
   String $cni_pod_cidr = $kubernetes::cni_pod_cidr,
   String $kube_api_advertise_address = $kubernetes::kube_api_advertise_address,
   String $etcd_initial_cluster = $kubernetes::etcd_initial_cluster,
+  Integer $etcd_heartbeat_interval = $kubernetes::etcd_heartbeat_interval,
+  Integer $etcd_election_timeout = $kubernetes::etcd_election_timeout,
   Integer $api_server_count = $kubernetes::api_server_count,
   String $etcd_version = $kubernetes::etcd_version,
   String $token = $kubernetes::token,
